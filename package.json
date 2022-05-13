@@ -1,6 +1,6 @@
 {
   "name": "react-showcase",
-  "home": "https://dmitrymitrakhovich.github.io/react-showcase",
+  "homepage": "https://dmitrymitrakhovich.github.io/react-showcase",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
