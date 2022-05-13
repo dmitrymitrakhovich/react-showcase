@@ -10,7 +10,7 @@ export default function Header() {
         <ul id='nav-mobile' className='right hide-on-med-and-down'>
           <li>
             <a
-              href='https://dmitrymitrakhovich.github.io/react-showcase/'
+              href='https://github.com/dmitrymitrakhovich/react-showcase'
               target='_blank'
               rel='noreferrer'
             >

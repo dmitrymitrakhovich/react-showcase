@@ -8,7 +8,7 @@ export default function Footer() {
           © {new Date().getFullYear()} Copyright Text
           <a
             className='grey-text text-lighten-4 right'
-            href='https://dmitrymitrakhovich.github.io/react-showcase/'
+            href='https://github.com/dmitrymitrakhovich/react-showcase'
             target='_blank'
             rel='noreferrer'
           >
