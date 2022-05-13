@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { API_KEY, API_URL } from "../config";
+import Alert from "./Alert";
 import BasketList from "./BasketList";
 import Cart from "./Cart";
 import GoodsList from "./GoodsList";
@@ -10,6 +11,7 @@ export default function Shop() {
   const [loading, setLoading] = useState(true);
   const [order, setOrder] = useState([]);
   const [isBasketShow, setBasketShow] = useState(false);
+  const [alertName, setAlertName] = useState("");
 
   const addToBasket = (item) => {
     const itemIndex = order.findIndex((orderItem) => orderItem.id === item.id);
@@ -33,6 +35,7 @@ export default function Shop() {
 
       setOrder(newOrder);
     }
+    setAlertName(item.name);
   };
 
   const removeFromBasket = (id) => {
@@ -75,6 +78,10 @@ export default function Shop() {
     setOrder(newOrder);
   };
 
+  const closeAlert = () => {
+    setAlertName("");
+  };
+
   useEffect(() => {
     fetch(API_URL, {
       headers: {
@@ -105,6 +112,7 @@ export default function Shop() {
           incQuantity={incQuantity}
         />
       )}
+      {alertName && <Alert name={alertName} closeAlert={closeAlert} />}
     </main>
   );
 }
